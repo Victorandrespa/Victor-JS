@@ -1,0 +1,45 @@
+.accordion {
+    width: 100%;
+}
+.main-block {
+    margin-top: 100px;
+    width: 80%;
+    max-width: 700px;
+}
+[id] {
+    scroll-margin-top: 100px;
+}
+.form-floating {
+    /* border: 2px solid black; */
+    max-width: 1000px;
+    margin: 5px;
+    width: 80%;
+    /* margin-left: 5%; */
+    align-self: center;
+}
+.form-control{
+    max-width: 100%;
+}
+.accordion-body {
+    width: 100%;
+    justify-self: center;
+}
+.btn {
+    max-width: 150px;
+    align-self: center;
+}
+.imagen-triangulo {
+    max-width: 200px;
+    margin-bottom: 25px;
+}
+.notas-academicas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.notas-academicas .form-floating {
+    max-width: 200px; 
+  }
+.list-group {
+    max-width: 80%;
+}

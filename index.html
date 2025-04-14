@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>M1Ra3A1</title>
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand fixed-top" style="background-color: #cbeaeb;">
+            <div class="container-fluid d-flex flex-row justify-content-between align-items-center">
+                <!-- Izquierda -->
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="#">Operaciones Basicas</a>
+                    <img class="me-2" src="https://www.w3schools.com/whatis/img_js.png" alt="js" width="30" height="30">
+                </div>
+                <!-- Derecha -->
+                <div class="d-flex align-items-center">
+                    <!-- <div class="btn-group btn-group-sm mx-2" role="group" aria-label="Small button group">
+                        <button type="button" class="btn btn-outline-dark">Abrir</button>
+                        <button type="button" class="btn btn-outline-dark">Cerrar</button>
+                    </div> -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropstart">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Actividades
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#title-carne">Carnet & Nombre</a></li>
+                                <li><a class="dropdown-item" href="#title-hipotenusa">Hipotenusa</a></li>
+                                <li><a class="dropdown-item" href="#title-notas">Notas</a></li>
+                                <li><a class="dropdown-item" href="#title-positivoNegativo"># Positivo & Negativo</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#title-mayorMenor"># Mayor & Menor</a></li>
+                                <li><a class="dropdown-item" href="#title-tablaMultiplicacion">Tabla Multiplicacion</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#title-numerosPares">Numeros Pares</a></li>
+                                <li><a class="dropdown-item" href="#title-MCD">Maximo Comun Divisor</a></li>
+                                <li><a class="dropdown-item" href="#title-caracteres">Caracteres</a></li>
+                                <li><a class="dropdown-item" href="#title-contarPalabras">Contar Palabras</a></li>
+                                <li><a class="dropdown-item" href="#title-contarNumero">Contar Numero</a></li>
+                                <li><a class="dropdown-item" href="#title-palabraDescompuesta">Palabra Descompuesta</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#title-dosNumeros">Dos Textos</a></li>
+                                <li><a class="dropdown-item" href="#title-vocales">Vocales</a></li>
+                                <li><a class="dropdown-item" href="#title-crearTabla">Crear Tabla</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-block container d-flex flex-column justify-content-start min-vh-100 ">
+
+        <h4>Practica JS (15)</h4>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <!-- Carne & Nombre -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne" id="title-carne">
+                        Carne & Nombre
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex flex-column">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="Valor1">
+                            <label for="floatingInput">Carnet</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="Valor2">
+                            <label for="floatingInput">Nombre</label>
+                        </div>
+                        <button type="button" id="btn-carnet" class="btn btn-outline-danger">Ingresar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Hipotenusa -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo" id="title-hipotenusa">
+                        Hipotenusa
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column p-5">
+                        <img class="mx-auto imagen-triangulo"
+                            src="https://dicciomat.com/wp-content/uploads/2024/10/el-triangulo-rectangulo.png" alt="js">
+                        <div class="d-flex catetos-hipotenusa">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="cateto1">
+                                <label for="floatingInput">Cateto#1</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="cateto2">
+                                <label for="floatingInput">Cateto#2</label>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="resultado-Hipo" readonly>
+                            <label for="floatingInput">Hipotenusa</label>
+                        </div>
+                        <button type="button" id="btn-hipotenusa" class="btn btn-outline-danger mx-5">Calcular</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Notas -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree" id="title-notas">
+                        Notas
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column p-5">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div class="form-floating mb-3 me-3">
+                                <input type="text" class="form-control" id="notas-nombre">
+                                <label for="floatingInput">Nombre</label>
+                            </div>
+                            <div class="form-floating mb-3 me-3">
+                                <input type="text" class="form-control" id="notas-curso">
+                                <label for="floatingInput">Curso</label>
+                            </div>
+                        </div>
+                        <h5>Notas Academicas</h5>
+
+                        <div class="notas-academicas">
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="nota-matematicas">
+                                <label for="floatingInput">Matematicas</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="nota-fisica">
+                                <label for="floatingInput">Fisica</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="nota-geometria">
+                                <label for="floatingInput">Geometria</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="nota-sociales">
+                                <label for="floatingInput">Sociales</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="nota-ingles">
+                                <label for="floatingInput">Ingles</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="nota-promedio" readonly>
+                                <label for="floatingInput">Promedio</label>
+                            </div>
+                        </div>
+                        <button type="button" id="btn-notas" class="btn btn-outline-info mx-5">Ingresar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Positivo Negativo -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFour" id="title-positivoNegativo">
+                        # Positivo & Negativo
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="analiza-numero">
+                                <label for="floatingInput">Ingrese Numero</label>
+                            </div>
+                        </div>
+                        <button type="button" id="btn-analizar"
+                            class="btn btn-outline-dark mt-4 mx-auto">Analizar</button>
+                        <div class="list-group m-5">
+                            <button type="button" id="analisa-positivo" class="list-group-item list-group-item-action"
+                                aria-current="true">
+                                Positivo
+                            </button>
+                            <button type="button" id="analisa-neutro"
+                                class="list-group-item list-group-item-action">Neutro</button>
+                            <button type="button" id="analisa-negativo"
+                                class="list-group-item list-group-item-action">Negativo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mayor & Menor -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFive" id="title-mayorMenor">
+                        # Mayor & Menor
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="orden-1">
+                                <label for="floatingInput">Numero #1</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="orden-2">
+                                <label for="floatingInput">Numero #2</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="orden-3">
+                                <label for="floatingInput">Numero #3</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark mt-4 mx-auto"
+                            id="btn-ordenar">Analizar</button>
+                        <div class="list-group">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" id="orden-mayor"># Mayor: </li>
+                                <li class="list-group-item" id="orden-segundo"># Medio: </li>
+                                <li class="list-group-item" id="orden-tercero"># Menor: </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tabla Multiplicacion -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseSix" id="title-tablaMultiplicacion">
+                        Tabla de Multiplicacion
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column p-5">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="tabla-num">
+                                <label for="floatingInput">Ingrese Numero</label>
+                            </div>
+                        </div>
+                        <button type="button" id="btn-mostrar"
+                            class="btn btn-outline-dark mt-4 mx-auto">Mostrar</button>
+                        <div class="list-group m-3 d-flex align-self-center">
+                            <table class="table table-bordered border-black">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="d-none" id="titulo-multiplicacion">Multiplicacion</th>
+                                        <th scope="col" class="d-none" id="titulo-resultado">Resultado</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-multiplicar" class="text-center">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Numeros Pares -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseSeven" id="title-numerosPares">
+                        Numeros Pares
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column p-5">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div class="form-floating mb-3 me-3">
+                                <input type="number" class="form-control" id="pares-num1">
+                                <label for="floatingInput">Valor# 1</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="pares-num2">
+                                <label for="floatingInput">Valor# 2</label>
+                            </div>
+                        </div>
+                        <button type="button" id="btn-mostrar-pares"
+                            class="btn btn-outline-dark my-4 mx-auto">Calcular</button>
+                        <h5>Numeros pares existentes</h5>
+                        <div class="form-floating">
+                            <textarea class="form-control mt-3" placeholder="Leave a comment here" id="pares-resultado"
+                                style="height: 100px" readonly></textarea>
+                            <label for="floatingTextarea2">Resultado</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Maximo comun Divisor -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseEight" id="title-MCD">
+                        Maximo Comun Divisor
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="form-floating mb-3 me-3">
+                                <input type="number" class="form-control" id="mcd-valor1">
+                                <label for="floatingInput">Valor# 1</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="mcd-valor2">
+                                <label for="floatingInput">Valor# 2</label>
+                            </div>
+                        </div>
+                        <button type="button" id="btn-mostrar-mcd"
+                            class="btn btn-outline-dark m-2 mx-auto">Analizar</button>
+                        <div class="form-floating">
+                            <textarea class="form-control mt-3" placeholder="Leave a comment here" id="mcd-resultado"
+                                style="height: 100px" readonly></textarea>
+                            <label for="floatingTextarea2">Resultado</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Caracteres -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseNine" id="title-caracteres">
+                        Caracteres
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column">
+                        <div class="form-floating">
+                            <textarea class="form-control mt-3" placeholder="Leave a comment here" id="ingreso-texto"
+                                style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Ingrese un Texto</label>
+                        </div>
+                        <button type="button" id="btn-analizar-caracteres"
+                            class="btn btn-outline-dark mt-4 mx-auto">Analizar</button>
+                        <div class="form-floating">
+                            <textarea class="form-control mt-3" placeholder="Leave a comment here"
+                                id="resultado-caracteres" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Ingrese un Texto</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contar Palabras -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTen" id="title-contarPalabras">
+                        Contar Palabras
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column p-2">
+                        <div class="form-floating my-3">
+                            <textarea class="form-control mt-3" placeholder="Leave a comment here"
+                                id="ingreso-texto-contar" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Ingresar un Texto</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="palabra-buscar">
+                            <label for="floatingInput">Buscar Palabra</label>
+                        </div>
+                        <button type="button" id="btn-contar-palabra"
+                            class="btn btn-outline-dark mt-4 mx-auto">Buscar</button>
+                        <div class="form-floating m-3">
+                            <input type="text" class="form-control" id="resultado-contar-palabras">
+                            <label for="floatingInput">Resultado</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contar Numero -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseEleven" id="title-contarNumero">
+                        Contar Numero
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column p-2">
+                        <div class="form-floating my-3">
+                            <input type="number" class="form-control" id="contar-numero">
+                            <label for="floatingTextarea2">Numero</label>
+                        </div>
+                        <button type="button" id="btn-contar-numero"
+                            class="btn btn-outline-dark mt-4 mx-auto">Calcular</button>
+                        <div class="form-floating m-3">
+                            <input type="text" class="form-control" id="resultado-contar-numero">
+                            <label for="floatingInput">Resultado</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Palabra descomponer -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwelf" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwelf" id="title-palabraDescompuesta">
+                        Palabra Descompuesta
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwelf" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column">
+                        <div class="d-flex flex-row justify-content-center">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Seleccionar
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item opcion-palabra">Sol</a></li>
+                                <li><a class="dropdown-item opcion-palabra">Caracteristica</a></li>
+                                <li><a class="dropdown-item opcion-palabra">Piramide</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item opcion-palabra">Otra</a></li>
+                            </ul>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="analiza-palabra">
+                                <label for="floatingInput">Ingrese Palabra</label>
+                            </div>
+                        </div>
+                        <button type="button" id="btn-analizar-palabra"
+                            class="btn btn-outline-dark mt-4 mx-auto">Analizar</button>
+                        <div class="input-group mb-3 mt-3">
+                            <span class="input-group-text" id="palabra-descompuesta-1"></span>
+                            <input type="text" class="form-control text-center"
+                                aria-label="Amount (to the nearest dollar)" id="palabra-descompuesta">
+                            <span class="input-group-text" id="palabra-descompuesta-2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Dos numeros -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThirdteen" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThirdteen" id="title-dosNumeros">
+                        Dos Textos
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThirdteen" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="dostextos-valor1">
+                                <label for="floatingInput">Texto #1</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="dostextos-valor2">
+                                <label for="floatingInput">Texto #2</label>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <button type="button" id="btn-dost-caracteres"
+                                class="btn btn-outline-dark mt-4 mx-auto">Caracteres</button>
+                            <button type="button" id="btn-dost-letras" class="btn btn-outline-dark mt-4 mx-auto">Letra
+                                S</button>
+                            <button type="button" id="btn-dost-pares" class="btn btn-outline-dark mt-4 mx-auto">Digitos
+                                Pares</button>
+                        </div>
+                        <div class="list-group m-3">
+                            <div id="dost-conteo"></div>
+                            <table class="table table-bordered border-black">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" id="tabla-head-1" class="d-none"></th>
+                                        <th scope="col" id="tabla-head-2" class="d-none"></th>
+                                        <th scope="col" id="tabla-head-3" class="d-none"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-dost-texto" class="text-center">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Vocales -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFourteen" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFourteen" id="title-vocales">
+                        Vocales
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFourteen" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="vocales-texto1">
+                                <label for="floatingInput">Texto #1</label>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <button type="button" id="btn-vocales"
+                                class="btn btn-outline-dark mt-4 mx-auto">Caracteres</button>
+                        </div>
+                        <div class="list-group m-3">
+                            <table class="table table-bordered border-black">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" id="vocales-head-1" class="d-none text-center"></th>
+                                        <th scope="col" id="vocales-head-2" class="d-none text-center"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-vocales" class="text-center">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Crear Tabla -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFifthteen" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFifthteen" id="title-crearTabla">
+                        Crear Tabla
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFifthteen" class="accordion-collapse collapse">
+                    <div class="accordion-body d-flex justify-content-center flex-column">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="columnas-input">
+                                <label for="floatingInput"># Columnas</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="numbre" class="form-control" id="filas-input">
+                                <label for="floatingInput"># Filas</label>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <button type="button" id="btn-crear-tabla" class="btn btn-outline-dark mt-4 mx-auto">Crear
+                                Tabla</button>
+                        </div>
+                        <div class="list-group m-3">
+                            <table class="table table-bordered">
+                                <tbody id="titulo-tabla" class="text-center">
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered border-black">
+                                <tbody id="nuevatabla-creada" class="text-center">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mt-5">
+            <h4>Retos Adicionales</h4>
+        </div>
+
+
+        <div class="accordion" id="accordionExample">
+            <!-- Indicar si un valor ingresado es o no un número primo. -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Numero Primo
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="inputPrimo1">
+                                <label for="floatingInput">Ingrese Numero</label>
+                            </div>
+                            <button type="button" id="btn-revisar-primo"
+                                class="btn btn-outline-dark my-4 mx-auto">Revisar si es primo</button>
+                            <input type="text" class="form-control" id="outputPrimo1" style="max-width: 200px;"
+                                readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mostrar los números primos hasta un valor ingresado por el usuario. -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Lista de Primos
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="inputListaPrimo1">
+                                <label for="floatingInput">Ingrese Numero</label>
+                            </div>
+                            <button type="button" id="btn-listar-primo" class="btn btn-outline-dark my-4 mx-auto">Listar
+                                Valores</button>
+                            <div id="outputListaPrimo1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mostrar los números primos existentes entre 1 rango (dos valores). -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Lista de Primos, Entre dos valores
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <div class="d-flex flex-row justify-content-center align-items-center">
+                                <div class="form-floating mx-2">
+                                    <input type="number" class="form-control" id="inputValoresPrimos1">
+                                    <label for="floatingInput">Valor #1</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="inputValoresPrimos2">
+                                    <label for="floatingInput">Valor #2</label>
+                                </div>
+                            </div>
+                            <button type="button" id="btn-valores-primos"
+                                class="btn btn-outline-dark my-4 mx-auto">Calcular Primos entre valores</button>
+                            <div id="outputValoresPrimos"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mostrar la serie de Fibonacci, hasta un valor ingresado por el usuario. -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Numero Fibonacci
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <div class="form-floating mx-2">
+                                <input type="number" class="form-control" id="inputValorFibonacci1">
+                                <label for="floatingInput">Valor</label>
+                            </div>
+                            <div class="d-flex flex-row justify-content-center align-items-center my-4">
+                                <button type="button" id="btn-fibonacci" class="btn btn-outline-dark mx-1">Calcular
+                                    Fibonacci</button>
+                                <button type="button" id="btn-fibonacci2" class="btn btn-outline-dark">Generar
+                                    serie</button>
+                            </div>
+                            <div id="outputValorFibonacci"></div>
+                            <div id="outputValorFibonacci2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Indicar si un número es o no perfecto -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Numero Perfecto
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <div class="form-floating mx-2">
+                                <input type="number" class="form-control" id="inputValorPerfecto">
+                                <label for="floatingInput">Valor</label>
+                            </div>
+                            <button type="button" id="btn-perfecto" class="btn btn-outline-dark mx-1 my-4">Es
+                                perfecto?</button>
+                            <div id="outputValorPerfecto" class="text-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Convertir un valor numérico binario a decimal -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Deciamal a Binario
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <div class="form-floating mx-2">
+                                <input type="number" class="form-control" id="inputValorDecimal">
+                                <label for="floatingInput">Valor Decimal</label>
+                            </div>
+                            <button type="button" id="btn-convierte-decimal"
+                                class="btn btn-outline-dark mx-1 my-4">Convertir a Binario</button>
+                            <div id="outputValorDecimal" class="text-center my-3"></div>
+
+                            <div class="form-floating mx-2">
+                                <input type="number" class="form-control" id="inputValorBinario">
+                                <label for="floatingInput">Valor Binario</label>
+                            </div>
+                            <button type="button" id="btn-convierte-binario"
+                                class="btn btn-outline-dark mx-1 my-4">Convertir a Binario</button>
+                            <div id="outputValorBinario" class="text-center my-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <br><br><br>
+        <hr>
+        <a href="../../index.html"><strong>Menu Principal</strong></a>
+        <br><br>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="operaciones.js"></script>
+</body>
+
+</html>
