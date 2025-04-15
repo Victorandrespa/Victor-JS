@@ -606,7 +606,7 @@ document.getElementById("btn-convierte-binario").addEventListener("click", funct
     //alert(numeroBinario.length);
     //alert(numeroBinario[0]);
 
-    for (let i = 1; i < caracteres; i++) {
+    for (let i = 1; i <= caracteres; i++) {
         let potencia = parseInt(numeroBinario.length - i);
         let digito = parseInt(numeroBinario[i - 1]);
         resultadoDecimal += (digito) * (2 ** potencia);
