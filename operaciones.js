@@ -105,7 +105,7 @@ document.getElementById("btn-ordenar").addEventListener("click", function () {
 document.getElementById("btn-mostrar").addEventListener("click", function () {
     document.getElementById("titulo-multiplicacion").classList.remove("d-none");
     document.getElementById("titulo-resultado").classList.remove("d-none");
-    
+
     let valor1 = parseFloat(document.getElementById("tabla-num").value) || 0;
     let tbody = document.getElementById("tabla-multiplicar");
     tbody.innerHTML = "";
@@ -515,7 +515,7 @@ document.getElementById("btn-valores-primos").addEventListener("click", function
     let valor2 = parseInt(document.getElementById("inputValoresPrimos2").value) || 0;
     let primos1 = [];
     let mayor = Math.max(valor1, valor2);
-    let menor = Math.min(valor1,valor2);
+    let menor = Math.min(valor1, valor2);
 
     for (let index = menor; index <= mayor; index++) {
         let divisores = 0;
@@ -528,8 +528,11 @@ document.getElementById("btn-valores-primos").addEventListener("click", function
             primos1.push(index);
         };
     };
-
-    document.getElementById("outputValoresPrimos").innerHTML = "Numeros primos: " + primos1.join(", ");
+    if (primos1.length >= 1) {
+        document.getElementById("outputValoresPrimos").innerHTML = "Numeros primos: " + primos1.join(", ");
+    } else {
+        document.getElementById("outputValoresPrimos").innerHTML = "No hay numeros Primos entre los valores!";
+    };
 });
 
 //Mostrar la serie de Fibonacci, hasta un valor ingresado por el usuario. 
@@ -576,26 +579,26 @@ document.getElementById("btn-perfecto").addEventListener("click", function () {
 });
 
 //Convertir un valor numérico binario a decimal 
-document.getElementById("btn-convierte-decimal").addEventListener("click" , function() {
+document.getElementById("btn-convierte-decimal").addEventListener("click", function () {
     //alert("si funciona");
     let numeroDecimal = document.getElementById("inputValorDecimal").value || 0;
     let residuo = [];
     let resultadoBinario = "";
 
-    while ( numeroDecimal > 0 ) {
-        let resultado = parseInt(numeroDecimal/2);
-        residuo.push (numeroDecimal % 2); 
+    while (numeroDecimal > 0) {
+        let resultado = parseInt(numeroDecimal / 2);
+        residuo.push(numeroDecimal % 2);
         numeroDecimal = resultado;
     }
     //alert(residuo.length);
 
-    for (let i = 1; i < (residuo.length +1); i++) {
+    for (let i = 1; i < (residuo.length + 1); i++) {
         resultadoBinario += residuo[residuo.length - i];
     }
     document.getElementById("outputValorDecimal").innerHTML = "# Binario: " + resultadoBinario;
 });
 
-document.getElementById("btn-convierte-binario").addEventListener("click" , function() {
+document.getElementById("btn-convierte-binario").addEventListener("click", function () {
     let numeroBinario = document.getElementById("inputValorBinario").value || 0;
     let caracteres = numeroBinario.length;
     let resultadoDecimal = 0;
@@ -603,10 +606,10 @@ document.getElementById("btn-convierte-binario").addEventListener("click" , func
     //alert(numeroBinario.length);
     //alert(numeroBinario[0]);
 
-    for (let i = 1; i < caracteres ; i++) {
+    for (let i = 1; i < caracteres; i++) {
         let potencia = parseInt(numeroBinario.length - i);
         let digito = parseInt(numeroBinario[i - 1]);
-        resultadoDecimal += (digito)*(2**potencia);
+        resultadoDecimal += (digito) * (2 ** potencia);
     }
     document.getElementById("outputValorBinario").innerHTML = "# Decimal: " + resultadoDecimal;
 });
