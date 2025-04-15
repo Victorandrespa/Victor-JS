@@ -518,13 +518,13 @@ document.getElementById("btn-valores-primos").addEventListener("click", function
     let menor = Math.min(valor1,valor2);
 
     for (let index = menor; index <= mayor; index++) {
-        let divisores = [];
-        for (let i = 0; i <= index.length; i++) {
+        let divisores = 0;
+        for (let i = 1; i <= index; i++) {
             if (index % i === 0) {
-                divisores.push(i);
+                divisores++;
             };
         };
-        if (divisores.length === 2) {
+        if (divisores === 2) {
             primos1.push(index);
         };
     };
