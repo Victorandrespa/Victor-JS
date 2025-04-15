@@ -514,28 +514,22 @@ document.getElementById("btn-valores-primos").addEventListener("click", function
     let valor1 = parseInt(document.getElementById("inputValoresPrimos1").value) || 0;
     let valor2 = parseInt(document.getElementById("inputValoresPrimos2").value) || 0;
     let primos1 = [];
-    let primos2 = [];
     let mayor = Math.max(valor1, valor2);
+    let menor = Math.min(valor1,valor2);
 
-    for (let index = 1; index <= mayor; index++) {
-        if (valor1 % index === 0) {
+    for (let index = menor; index <= mayor; index++) {
+        let divisores = [];
+        for (let i = 0; i <= index.length; i++) {
+            if (index % i === 0) {
+                divisores.push(i);
+            };
+        };
+        if (divisores.length === 2) {
             primos1.push(index);
         };
-        if (valor2 % index === 0) {
-            primos2.push(index);
-        };
     };
 
-
-    if (primos1.length === 2 && primos2.length === 2) {
-        document.getElementById("outputValoresPrimos").innerHTML = "Numeros primos: " + "1, " + primos1[1] + ", " + primos2[1];
-    } else if (primos1.length === 2) {
-        document.getElementById("outputValoresPrimos").innerHTML = "Solo Valor #1 es primo: " + primos1.join(", ");
-    } else if (primos2.length === 2) {
-        document.getElementById("outputValoresPrimos").innerHTML = "Solo Valor #2 es primo: " + primos2.join(", ");
-    } else {
-        document.getElementById("outputValoresPrimos").innerHTML = "Ninguno es Numero Primo!";
-    };
+    document.getElementById("outputValoresPrimos").innerHTML = "Numeros primos: " + primos1.join(", ");
 });
 
 //Mostrar la serie de Fibonacci, hasta un valor ingresado por el usuario. 
